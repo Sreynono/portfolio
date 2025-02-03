@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.icon-menu {
+  @apply inline-block bg-no-repeat;
+  background-image: url("../public/menu.svg");
+  width: 48px;
+  height: 48px;
+}
+
+input[type="checkbox"]:checked + .icon-menu {
+  /* សញ្ញា​ + select ban tae element nv krom input and all element del nv krom vea, and សញ្ញា ប្រហែល ~ select all element under input including input*/
+  @apply block;
+  background-image: url("../public/cancel.svg");
+}
+
+input[type="checkbox"]:checked ~ nav {
+  @apply flex;
+}
+  html {
+    scroll-behavior: smooth;
+  }
+
